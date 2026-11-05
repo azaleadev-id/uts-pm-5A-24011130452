@@ -10,6 +10,7 @@ class HeaderProfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tema = Theme.of(context).textTheme;
+    final warna = Theme.of(context).colorScheme;
     return Column(
       children: [
         Stack(
@@ -17,37 +18,56 @@ class HeaderProfil extends StatelessWidget {
           alignment: Alignment.center,
           children: [
             Container(
-              height: 160,
-              decoration: const BoxDecoration(
+              height: 168,
+              decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Color(0xFF3949AB), Color(0xFF7986CB)],
+                  colors: [warna.primary, const Color(0xFF6F1427)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
+                ),
+                borderRadius: const BorderRadius.vertical(
+                  bottom: Radius.circular(32),
                 ),
               ),
             ),
             Positioned(
-              bottom: -50,
+              bottom: -54,
               child: CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage(profil.fotoAsset),
+                radius: 58,
+                backgroundColor: warna.surface,
+                child: CircleAvatar(
+                  radius: 52,
+                  backgroundImage: AssetImage(profil.fotoAsset),
+                ),
               ),
             ),
           ],
         ),
-        const SizedBox(height: 56),
+        const SizedBox(height: 60),
         Text(
           profil.nama,
           textAlign: TextAlign.center,
-          style: tema.headlineSmall,
+          style: tema.headlineSmall?.copyWith(
+            color: const Color(0xFF40171D),
+            fontWeight: FontWeight.w800,
+            letterSpacing: -0.4,
+          ),
         ),
         const SizedBox(height: 4),
-        Text('${profil.nim} . ${profil.kelas}', style: tema.bodyMedium),
+        Text(
+          '${profil.nim}  •  ${profil.kelas}',
+          style: tema.bodyMedium?.copyWith(color: warna.primary),
+        ),
         const SizedBox(height: 8),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(profil.bio, textAlign: TextAlign.center),
+          child: Text(
+            profil.bio,
+            textAlign: TextAlign.center,
+            style: tema.bodyMedium?.copyWith(height: 1.5),
+          ),
         ),
+        const SizedBox(height: 16),
       ],
     );
   }
