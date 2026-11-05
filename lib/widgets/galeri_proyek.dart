@@ -17,6 +17,8 @@ class GaleriProyek extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 8,
           crossAxisSpacing: 8,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             for (final j in judul)
               Container(
