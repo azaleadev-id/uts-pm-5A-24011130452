@@ -13,6 +13,7 @@ class HeaderProfil extends StatelessWidget {
     return Column(
       children: [
         Stack(
+          clipBehavior: Clip.none,
           alignment: Alignment.center,
           children: [
             Container(
