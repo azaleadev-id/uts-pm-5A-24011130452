@@ -41,7 +41,7 @@ class HeaderProfil extends StatelessWidget {
           style: tema.headlineSmall,
         ),
         const SizedBox(height: 4),
-        Text('${profil.nim} · ${profil.kelas}', style: tema.bodyMedium),
+        Text('${profil.nim} . ${profil.kelas}', style: tema.bodyMedium),
         const SizedBox(height: 8),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
