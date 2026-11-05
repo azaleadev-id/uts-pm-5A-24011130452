@@ -1,8 +1,8 @@
 import '../models/profil.dart';
 
 const Profil dataProfil = Profil(
-  nama: 'Nama Lengkap Mahasiswa',
-  nim: '0000000000',
+  nama: 'Fari Kurniawan',
+  nim: '24011130452',
   kelas: '5A',
   prodi: 'Teknik Informatika, Fakultas Ilmu Komputer dan Teknologi Informasi',
   bio: 'Mahasiswa semester 5 yang sedang belajar membangun aplikasi mobile '
