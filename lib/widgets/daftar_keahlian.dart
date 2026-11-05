@@ -24,20 +24,23 @@ class DaftarKeahlian extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 8),
-        Wrap(
-          spacing: 8,
-          runSpacing: 4,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             for (final k in keahlian)
-              Chip(
-                avatar: Icon(Icons.check_rounded, size: 17, color: warna.primary),
-                label: Text(k),
-                labelStyle: TextStyle(
-                  color: warna.onSurface,
-                  fontWeight: FontWeight.w600,
+              Padding(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Chip(
+                  avatar:
+                      Icon(Icons.check_rounded, size: 17, color: warna.primary),
+                  label: Text(k),
+                  labelStyle: TextStyle(
+                    color: warna.onSurface,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  side: BorderSide(color: warna.outlineVariant),
+                  backgroundColor: warna.surface,
                 ),
-                side: BorderSide(color: warna.outlineVariant),
-                backgroundColor: warna.surface,
               ),
           ],
         ),
