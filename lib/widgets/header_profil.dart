@@ -20,10 +20,13 @@ class HeaderProfil extends StatelessWidget {
             Container(
               height: 168,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [warna.primary, const Color(0xFF6F1427)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+                image: DecorationImage(
+                  image: const AssetImage('assets/banner.jpg'),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    warna.primary.withOpacity(0.45),
+                    BlendMode.srcATop,
+                  ),
                 ),
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.circular(32),

@@ -18,4 +18,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/foto_profil.jpg
+    - assets/foto_profil.jpg
+    - assets/banner.jpg
