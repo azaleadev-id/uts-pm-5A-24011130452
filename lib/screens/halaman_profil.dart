@@ -30,14 +30,14 @@ class _HalamanProfilState extends State<HalamanProfil> {
     const p = dataProfil;
     const jarak = SizedBox(height: 16);
 
-    final header = HeaderProfil(profil: p);
+    const header = HeaderProfil(profil: p);
     final tombol = TombolIkuti(mengikuti: _mengikuti, onPressed: _toggleIkuti);
     final statistik = StatistikRow(
       proyek: p.proyek,
       pengikut: _pengikut,
       mengikuti: p.mengikuti,
     );
-    final info = KartuInfo(profil: p);
+    const info = KartuInfo(profil: p);
     final keahlian = DaftarKeahlian(keahlian: p.keahlian);
     final galeri = GaleriProyek(judul: p.galeri);
 
