@@ -69,10 +69,11 @@ class _HalamanProfilState extends State<HalamanProfil> {
                     ),
                   ),
                   const SizedBox(width: 16),
-                  Column(
+                  Expanded(
+                      child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [keahlian, jarak, galeri],
-                  ),
+                  )),
                 ],
               ),
             );
