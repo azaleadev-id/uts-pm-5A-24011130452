@@ -15,11 +15,12 @@ class StatistikRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _Stat(label: 'Proyek', nilai: proyek),
-        _Stat(label: 'Pengikut', nilai: pengikut),
-        _Stat(label: 'Mengikuti', nilai: mengikuti),
+        Expanded(child: _Stat(label: 'Proyek', nilai: proyek)),
+        const SizedBox(width: 8),
+        Expanded(child: _Stat(label: 'Pengikut', nilai: pengikut)),
+        const SizedBox(width: 8),
+        Expanded(child: _Stat(label: 'Mengikuti', nilai: mengikuti)),
       ],
     );
   }
@@ -33,14 +34,30 @@ class _Stat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          '$nilai',
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        Text(label),
-      ],
+    final warna = Theme.of(context).colorScheme;
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
+      decoration: BoxDecoration(
+        color: warna.primaryContainer,
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: Column(
+        children: [
+          Text(
+            '$nilai',
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  color: warna.onPrimaryContainer,
+                  fontWeight: FontWeight.w800,
+                ),
+          ),
+          Text(
+            label,
+            style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                  color: warna.onPrimaryContainer,
+                ),
+          ),
+        ],
+      ),
     );
   }
 }
