@@ -39,7 +39,7 @@ class _BarisInfo extends StatelessWidget {
         children: [
           Icon(ikon, size: 20),
           const SizedBox(width: 12),
-          Text(teks),
+          Expanded(child: Text(teks)),
         ],
       ),
     );
