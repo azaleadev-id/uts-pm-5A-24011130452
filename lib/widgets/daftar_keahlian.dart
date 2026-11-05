@@ -12,7 +12,7 @@ class DaftarKeahlian extends StatelessWidget {
       children: [
         Text('Keahlian', style: Theme.of(context).textTheme.titleMedium),
         const SizedBox(height: 8),
-        Row(
+        Wrap(
           children: [
             for (final k in keahlian)
               Padding(
