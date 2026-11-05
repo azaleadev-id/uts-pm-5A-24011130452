@@ -27,7 +27,7 @@ class _HalamanProfilState extends State<HalamanProfil> {
 
   @override
   Widget build(BuildContext context) {
-    final p = dataProfil;
+    const p = dataProfil;
     const jarak = SizedBox(height: 16);
 
     final header = HeaderProfil(profil: p);
@@ -55,7 +55,15 @@ class _HalamanProfilState extends State<HalamanProfil> {
                     width: 320,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [header, jarak, tombol, jarak, statistik, jarak, info],
+                      children: [
+                        header,
+                        jarak,
+                        tombol,
+                        jarak,
+                        statistik,
+                        jarak,
+                        info
+                      ],
                     ),
                   ),
                   const SizedBox(width: 16),
