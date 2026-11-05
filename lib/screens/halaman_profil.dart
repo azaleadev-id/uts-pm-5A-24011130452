@@ -21,8 +21,10 @@ class _HalamanProfilState extends State<HalamanProfil> {
   int _pengikut = dataProfil.pengikut;
 
   void _toggleIkuti() {
-    _mengikuti = !_mengikuti;
-    _pengikut += _mengikuti ? 1 : -1;
+    setState(() {
+      _mengikuti = !_mengikuti;
+      _pengikut += _mengikuti ? 1 : -1;
+    });
   }
 
   @override
