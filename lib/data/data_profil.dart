@@ -21,5 +21,10 @@ const Profil dataProfil = Profil(
     'Security Researcher',
     'System Analyst',
   ],
-  galeri: ['Aplikasi Kasir', 'Catatan Harian', 'Toko Online', 'Kalkulator'],
+  galeri: [
+    'Injourney Hospitality',
+    'Asian Gymnastics',
+    'Network Management',
+    'ERP modul Finnancial Modeller'
+  ],
 );
